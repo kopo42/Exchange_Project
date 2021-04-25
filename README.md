@@ -1,6 +1,11 @@
 # Exchange_Project
-환전 프로그램
-만든 사람
-소스코드 (클래스) 구성
-등등
-을 적어둔다
+Codes for current exchange program & divided into classe by functions
+
+written by Jaeyeon
+
+Class contents:
+TypeClass, ValueClass
+SelectClass (user input)
+ProcessingClass
+Printclass
+FileWriteClass
