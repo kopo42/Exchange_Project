@@ -1,4 +1,4 @@
-package exchangeEx;
+
 
 public class TypeClass {
 	int inputWon;

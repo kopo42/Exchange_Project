@@ -1,4 +1,4 @@
-package exchangeEx;
+
 
 import java.util.Scanner;
 
@@ -35,13 +35,9 @@ public class ProcessingClass {
 		
 		ex_rate = ValueClass.EX_RATE_JPY * 100;
 		t.result = t.inputWon / ex_rate;
-		System.out.println(t.result);
 		
 		t.jpy = (int)t.result; // changing the type of variable
-		System.out.println(t.jpy);
 		t.krch = t.inputWon - t.jpy * ex_rate;
-		System.out.println(t.krch);
-		
 		printer.printJPY(t);
 		//return t.jpy;
 	}

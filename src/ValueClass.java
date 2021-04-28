@@ -1,6 +1,6 @@
-package exchange2;
 
-public class ConstValueClass {
+
+public class ValueClass {
 	final static int EX_TYPE_EXIT = 0;
 	final static int EX_TYPE_USD = 1;
 	final static int EX_TYPE_EUR = 2;
@@ -8,4 +8,5 @@ public class ConstValueClass {
 	final static double EX_RATE_USD = 1127.3;
 	final static double EX_RATE_EUR = 1349.4;
 	final static double EX_RATE_JPY = 10.197;
+	final static String filename = "C:\\Users\\J\\Desktop\\source\\demo4.csv"; //수정 용이
 }

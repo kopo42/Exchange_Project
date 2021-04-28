@@ -1,4 +1,4 @@
-package exchange2;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -6,20 +6,19 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class FileWriteClass {
-	ExchangeType extype = new ExchangeType();
+	TypeClass t = new TypeClass();
 	private FileWriter fw;
 	private boolean isFileExist;
 	
 	public FileWriteClass() {
-		String filename = "C:\\Users\\J\\Desktop\\source\\demo1.csv";
 		try {
-			File file = new File(filename);
+			File file = new File(ValueClass.filename);
 			if(file.exists() == true) {
 				isFileExist = true;
 			} else if(file.exists() == false){
 				isFileExist = false;
 			}
-			fw = new FileWriter(filename, true);					
+			fw = new FileWriter(ValueClass.filename, true);					
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -44,12 +43,12 @@ public class FileWriteClass {
 		}
 	}
 	
-	public void dataWrite(ExchangeType extype) throws IOException {
+	public void dataWrite(TypeClass t) throws IOException {
 		Calendar c = Calendar.getInstance();
 		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
 		
-		String result = sdf.format(c.getTime()) + "," + extype.exchange_type + "," + extype.w + "," 
-								+ extype.exchangeResult + "," + extype.cw + "\n";
+		String result = sdf.format(c.getTime()) + "," + t.exchange_type + "," + t.inputWon + "," 
+								+ t.result + "," + t.returnkrw + "\n";
 		fw.write(result);
 	}	
 }
